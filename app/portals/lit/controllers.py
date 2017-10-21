@@ -35,5 +35,5 @@ def route_index():
 @mod_lit.route('/leaderboard')
 def route_leaderboard():
     users = User.query.all()
-    sorted_users = sorted(users, key=lambda u: (u.lit_s, -u.lit_t))
+    sorted_users = sorted(users, key=lambda u: (u.lit_s, -u.lit_t), reverse=True)
     return render_template('leaderboard.html', users=sorted_users, portal=portal)
