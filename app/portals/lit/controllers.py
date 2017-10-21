@@ -18,7 +18,6 @@ def route_index():
     question = Question.query.get(u.lit_q)
     if question is None:
         flash('You have finished the quiz successfully! :D', 'alert-success')
-        return redirect(url_for('users.route_index'))
     score = u.lit_s
     if request.method == 'GET':
         return render_template('question.html', question=question, score=score,
@@ -40,7 +39,7 @@ def route_index():
 @login_required
 def route_leaderboard():
     u = current_user()
-    users = User.query.all()
+    users = User.query.filter(User.lit_t != 0)
     s_users = sorted(users, key=lambda u: (u.lit_s, -u.lit_t), reverse=True)
     u_users = [(u.email, u.lit_s) for u in s_users]
     return render_template('leaderboard.html', users=enumerate(u_users),

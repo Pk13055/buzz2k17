@@ -64,7 +64,7 @@ var map = AmCharts.makeChart("chartdiv", {
             {
                 "svgPath": targetSVG,
                 "title": "LitQuiz - Take a broomstick and fly to Moscow, for winter has come!",
-                "contest": "litquiz",
+                "contest": "lit",
                 "latitude": 55.7558,
                 "longitude": 37.6173
             },

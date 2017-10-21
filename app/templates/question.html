@@ -11,6 +11,7 @@
                 {% endfor %}
             {% endif %}
         {% endwith %}
+    {% if question %}
         <h4 class="mb-5">{{ question.title }}</h4>
         <p class="mb-5">{{ question.body|safe}}</p>
         <form action="{{ url_for(portal+".route_index") }}" method="post">
@@ -22,5 +23,6 @@
                 </span>
             </div>
         </form>
+    {% endif %}
     </div>
 {% endblock %}
