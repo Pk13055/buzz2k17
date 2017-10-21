@@ -8,6 +8,10 @@ from app.users.models import User
 mod_users = Blueprint('users', __name__)
 
 
+@mod_users.route('/ammap')
+def route_ammap():
+    return render_template('index.html')
+
 @mod_users.route('/')
 def route_index():
     if current_user() is None:
