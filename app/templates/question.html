@@ -5,6 +5,7 @@
     {{ question.title }}
     {{ score }}
     <form action="{{ url_for('lit.route_index') }}" method="post">
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
         <input type="text" name="response">
     </form>
 {% endblock %}

@@ -1,9 +1,11 @@
 from flask import Flask
 from flask_cas import CAS
+from flaskext.csrf import csrf
 from flask_sqlalchemy import SQLAlchemy
 
 
 app = Flask(__name__)
+csrf(app)
 cas = CAS(app, '/cas')
 db = SQLAlchemy(app)
 app.config.from_object('config')
