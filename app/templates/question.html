@@ -1,11 +1,26 @@
-{% extends 'base.html' %}
+{% extends 'portal.html' %}
+
+{% block title %}Lit Quiz{% endblock %}
 
 {% block content %}
-    {{ portal }}
-    {{ question.title }}
-    {{ score }}
-    <form action="{{ url_for('lit.route_index') }}" method="post">
-        <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
-        <input type="text" name="response">
-    </form>
+    <div class="text-center">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert {{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <h4 class="mb-5">{{ question.title }}</h4>
+        <p class="mb-5">{{ question.body|safe}}</p>
+        <form action="{{ url_for(portal+".route_index") }}" method="post">
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+            <div class="input-group">
+                <input type="text" name="response" class="form-control">
+                <span class="input-group-btn">
+                    <button class="btn btn-primary btn-large ml-3">Submit</button>
+                </span>
+            </div>
+        </form>
+    </div>
 {% endblock %}
