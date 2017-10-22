@@ -10,8 +10,6 @@ mod_users = Blueprint('users', __name__)
 
 @mod_users.route('/')
 def route_index():
-    if current_user() is None:
-        return redirect(url_for('users.route_login'))
     return render_template('index.html')
 
 
