@@ -2,3 +2,4 @@ __pycache__
 *.pyc
 .vscode
 .idea
+db.sqlite3
