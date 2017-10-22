@@ -1,7 +1,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://bootswatch.com/4-alpha/journal/bootstrap.min.css">
-    <title>{% block title %}{% endblock %}</title>
+    <title>{{ portal.replace("_", " ").title() }}</title>
     <style>
         .navbar-nav .nav-item+.nav-item {
             margin-left: 0;
@@ -38,7 +38,7 @@
         </ul>
     </div>
 </nav>
-<div class="container my-5">
+<div class="container-fluid my-5">
     {% block content %}
     {% endblock %}
 </div>
