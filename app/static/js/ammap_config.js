@@ -40,7 +40,7 @@ var map = AmCharts.makeChart("chartdiv", {
             {
                 "svgPath": targetSVG,
                 "title": "About us - Start from India and fly across the world with felicity buzz",
-                "contest": "about",
+                "contest": "#",
                 "latitude": 28.7041,
                 "longitude": 77.1025
             },
@@ -55,7 +55,7 @@ var map = AmCharts.makeChart("chartdiv", {
             {
                 "svgPath": targetSVG,
                 "title": "Schedule - Fly to Tokyo and have a look at what's in store for you in these 3 days!",
-                "contest": "schedule",
+                "contest": "#",
                 "latitude": 35.6895,
                 "longitude": 139.6917
             },
@@ -71,42 +71,42 @@ var map = AmCharts.makeChart("chartdiv", {
             {
                 "svgPath": targetSVG,
                 "title": "Turn the coat: Fly to Paris and debate your heart out!",
-                "contest": "debate",
+                "contest": "#",
                 "latitude": 48.8567,
                 "longitude": 2.3510
             },
             {
                 "svgPath": targetSVG,
                 "title": "CacheIn - Fly to Toronto and unlock the box of mystery, but only to find a new one ahead.",
-                "contest": "cachein",
+                "contest": "#",
                 "latitude": 43.8163,
                 "longitude": -79.4287
             },
             {
                 "svgPath": targetSVG,
                 "title": "Meet the team - Take a ride to LA and party with the team!!",
-                "contest": "team",
+                "contest": "#",
                 "latitude": 34.3,
                 "longitude": -118.15
             },
             {
                 "svgPath": targetSVG,
                 "title": "HackIn - Fly to Buenos Aires!!",
-                "contest": "hackin",
+                "contest": "#",
                 "latitude": -34.6037,
                 "longitude": -58.3816
             },
             {
                 "svgPath": targetSVG,
                 "title": "Toast Masters - Discover the leader in you in Cape Town!!",
-                "contest": "toastmasters",
+                "contest": "#",
                 "latitude": -33.9249,
                 "longitude": 18.4241
             },
             {
                 "svgPath": targetSVG,
                 "title": "Zombie Zone - Are you game to go Zombie in Jordan?!",
-                "contest": "zombiezone",
+                "contest": "#",
                 "latitude": 30.5852,
                 "longitude": 36.2384
             },
